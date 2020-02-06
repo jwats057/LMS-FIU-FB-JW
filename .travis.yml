@@ -13,13 +13,13 @@ deploy:
     skip_cleanup: true
     api-key:
       secure: $HEROKU_API_KEY
-    app: online-judge-mean
+    app: lms-fiu-fb
   # deploy app as api server
   - provider: heroku
     skip_cleanup: true
     api-key:
       secure: $HEROKU_API_KEY
-    app: online-judge-api
+    app: lms-fiu-fb-api
 
 after_deploy:
 # Procfile is only used for client, delete it to let server run 'npm start'
