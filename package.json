@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "test": "echo \"Error: no test specified\"",
+        "start": "NODE_ENV=production node ./server/server"
+    }
+}
