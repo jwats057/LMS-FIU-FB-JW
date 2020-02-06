@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "9"
+sudo: true
+
+branches:
+  only:
+  - master
+
+deploy:
+  # deploy app as front end website
+  - provider: heroku
+    skip_cleanup: true
+    api-key:
+      secure: $HEROKU_API_KEY
+    app: online-judge-mean
+  # deploy app as api server
+  - provider: heroku
+    skip_cleanup: true
+    api-key:
+      secure: $HEROKU_API_KEY
+    app: online-judge-api
+
+after_deploy:
+# Procfile is only used for client, delete it to let server run 'npm start'
+- rm Procfile
